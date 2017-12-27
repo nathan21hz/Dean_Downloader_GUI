@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Project SYSTEM "Project-5.1.dtd">
 <!-- eric project file for project CFile -->
-<!-- Saved: 2017-12-26, 22:28:42 -->
+<!-- Saved: 2017-12-26, 23:15:45 -->
 <!-- Copyright (C) 2017 ,  -->
 <Project version="5.1">
   <Language>en_US</Language>
@@ -12,10 +12,11 @@
   <Author></Author>
   <Email></Email>
   <Eol index="0"/>
-  <Sources>
-    <Source>__init__.py</Source>
-  </Sources>
-  <Forms/>
+  <Sources/>
+  <Forms>
+    <Form>edit.ui</Form>
+    <Form>main_ui.ui</Form>
+  </Forms>
   <Translations/>
   <Resources/>
   <Interfaces/>
