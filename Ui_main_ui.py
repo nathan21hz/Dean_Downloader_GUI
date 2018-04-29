@@ -124,10 +124,11 @@ class Ui_MainWindow(object):
         self.route_button.setFont(font)
         self.route_button.setObjectName("route_button")
         self.down_button = QtWidgets.QPushButton(self.centralWidget)
-        self.down_button.setGeometry(QtCore.QRect(30, 340, 171, 31))
+        self.down_button.setGeometry(QtCore.QRect(20, 340, 141, 31))
         font = QtGui.QFont()
         font.setFamily("Microsoft YaHei UI")
         self.down_button.setFont(font)
+        self.down_button.setFlat(False)
         self.down_button.setObjectName("down_button")
         self.progressBar = QtWidgets.QProgressBar(self.centralWidget)
         self.progressBar.setGeometry(QtCore.QRect(20, 390, 451, 31))
@@ -168,6 +169,12 @@ class Ui_MainWindow(object):
         font.setFamily("Microsoft YaHei UI")
         self.del_button.setFont(font)
         self.del_button.setObjectName("del_button")
+        self.pushButton = QtWidgets.QPushButton(self.centralWidget)
+        self.pushButton.setGeometry(QtCore.QRect(160, 340, 61, 31))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.pushButton.setFont(font)
+        self.pushButton.setObjectName("pushButton")
         MainWindow.setCentralWidget(self.centralWidget)
 
         self.retranslateUi(MainWindow)
@@ -178,6 +185,7 @@ class Ui_MainWindow(object):
         self.edit_button.clicked.connect(self.list_edit)
         self.add_button.clicked.connect(self.list_add)
         self.del_button.clicked.connect(self.list_del)
+        self.pushButton.clicked.connect(self.refilelist)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
@@ -196,3 +204,15 @@ class Ui_MainWindow(object):
         self.edit_button.setText(_translate("MainWindow", "修改"))
         self.add_button.setText(_translate("MainWindow", "添加"))
         self.del_button.setText(_translate("MainWindow", "删除"))
+        self.pushButton.setText(_translate("MainWindow", "重置记录"))
+
+
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    MainWindow = QtWidgets.QMainWindow()
+    ui = Ui_MainWindow()
+    ui.setupUi(MainWindow)
+    MainWindow.show()
+    sys.exit(app.exec_())
+

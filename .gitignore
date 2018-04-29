@@ -1,0 +1,22 @@
+# Windows:
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Python:
+*.py[cod]
+*.so
+*.egg
+*.egg-info
+dist
+build
+__pycache__
+_eric6project
+*.e4p
+
+# My configurations:
+*.jpg
+*.json
+*.spec
+*.ico
+°²×°°ü
